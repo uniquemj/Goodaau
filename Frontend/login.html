@@ -13,31 +13,40 @@
     <nav>
         <div id="left-container">
             <div class="logo">
-                <h1>Good<span>aau</span></h1>
+                <a href = "./index.html"><h1>Good<span>aau</span></h1></a>
             </div>
         </div>
         <div id="right-container">
-            <button>Login</button>     
+            <a href = "./login.html"><button class="btn">Login</button></a>    
         </div>
     </nav>
 
     <main>
-        <div id="main-container">
-            <div class="text-container">
+        <div class="login-container">
+            <div class="login_content">
                 <div class="title">
-                    <p>Good<span>aau</span></p>
+                    <p>LogIn to Goodaau</p>
                 </div>
-                <div class="body">
-                    <p>Goodaau is the online driving license management system that lets users to fill up the form and have written exam online without the need to attend physically in Transportation office.</p>
+                <div class="login_form">
+                    <form action="" method="post">
+                        <div class="input_field">
+                            <span class="user_logo"><i class="fa-solid fa-user"></i></span><input type="text" name="email" id="email" placeholder="Username or Email">
+                        </div>
+                        <div class="input_field">
+                            <span class="lock_logo"><i class="fa-solid fa-lock"></i></span><input type="password" name="password" id="password" placeholder="Password">
+                        </div>
+                        <button class="btn">Login</button>
+                    </form>
                 </div>
-                <div class="button">
-                    <button>Get Started</button>
+                <div class="or_container">
+                    <span class = "line"></span><p>or</p><span class = "line"></span>
                 </div>
-            </div>
-            <div class="image-container">
-                <img src="./aau.png"/>
+                <div class="google_container">
+                    <span class="google_logo"><i class="fa-brands fa-google"></i></span><a href="./payment.html">Continue with Google</a>
+                </div>
             </div>
         </div>
     </main>
+    <script src="https://kit.fontawesome.com/18dd44fec0.js" crossorigin="anonymous"></script>
 </body>
 </html>

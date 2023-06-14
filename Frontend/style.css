@@ -31,6 +31,14 @@ nav #left-container h1{
     font-size: 2rem;
 }
 
+#left-container a{
+    text-decoration: none;
+}
+
+#right-container a{
+    text-decoration: none;
+}
+
 nav #left-container h1 span{
     color: var(--secondary-color)
 }
@@ -42,9 +50,9 @@ nav #right-container{
     /* align-items: center; */
 }
 
-nav #right-container button{
+.btn{
     height: 100%;
-    width: 5.5em;
+    padding: 0.8rem 1.4rem;
     background-color: var(--secondary-color);
     border: none;
     border-radius: 0.3rem;
@@ -125,6 +133,253 @@ button:hover{
 .image-container img{
     height: 80%;
     width: 90%;
-
 }
 
+
+/* Login */
+
+.login-container{
+    /* border: 2px solid black; */
+    height: 70%;
+    width: 30%;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.login_content{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
+    height: 90%;
+    width: 90%;
+}
+
+.login_content .title{
+    font-size: 1.6rem;
+    color: var(--white-color);
+    font-weight: 500;
+    /* border: 2px solid black; */
+}
+
+.login_content .login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    height: 50%;
+    width: 100%;
+}
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+form input{
+    padding: 0.8rem;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 1rem;
+}
+
+
+form .input_field{
+    /* border: 2px solid black; */
+    padding: 0.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+form span{
+    background-color: white;
+    padding: 0.675rem;
+    font-size: 1.2rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+form .btn{
+    margin-top: 0.8rem;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.or_container{
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or_container p{
+    color: rgba(255,255,255,0.5);
+}
+.line{
+    margin: 0 0.4rem;
+    border: 1px solid rgba(255,255,255,0.5);
+    height: 0;
+    width: 100%;
+}
+
+.google_container{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--white-color);
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+}
+.google_container a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+.google_logo{
+    font-weight: lighter;
+    margin: 0 1.5rem 0 0;
+}
+
+/*Payment*/
+.payment-container{
+    background-color: #D9D9D9;
+    height: 40%;
+    width: 40%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem 0;
+    flex-direction: column;
+}
+.payment-container .title{
+    font-size: 2rem;
+}
+.payment_logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 50%;
+    margin: 2rem;
+}
+
+.payment_logo .esewa{
+    width: 50%;
+    height:100%;
+    /* padding: 0.8rem; */
+}
+.payment_logo a{
+    /* border: 2px solid black; */
+    height: 40%;
+    width: 20%;
+    text-align: center;
+    background-color: var(--white-color);
+}
+
+.payment_logo a:hover{
+    background-color: rgb(190, 186, 186);
+}
+.payment_logo .khalti{
+    width: 60%;
+    height:100%;
+}
+
+/*Exam*/
+.exam_container{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    height: 70%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.exam_container .question_container{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    width: 100%;
+    margin: 2rem;
+}
+
+.question_container h3{
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+
+.question_container p{
+    font-size: 2rem;
+}
+.exam_container .option_container{
+    /* border: 2px solid black; */
+    height: 70%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.option_container .option{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+}
+
+#btn{
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    background-color: #FFF3F3;
+    width: 80%;
+    height: 50%;
+    border: none;
+}
+
+#btn:hover{
+    background-color: antiquewhite;
+}
+
+.prev_next{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.congratulation_container{
+    border: 2px solid black;
+    text-align: center;
+    height: 60%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+
+.congratulation_container p,h4{
+    font-size: 2rem;
+    margin: 1.5rem;
+    color: white;
+}
+
+.congratulation_container .button_container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* border: 2px solid black; */
+    margin: 1.5rem;
+}
