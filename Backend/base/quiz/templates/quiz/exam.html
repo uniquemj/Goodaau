@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="exam_container">
+    <div class="rule_container">
+        <div class="title_container">
+            <h1>Before Starting Exam</h1>
+        </div>
+        <div class="rule">
+            <h2>Instruction :</h2>
+            <ul>
+                <li>You must get 2 out of 10 to pass exam.</li>
+                <li>All the question will be objective(question with answer options) no any subjective questions included.</li>
+                <li>You must clearly press in circle to choose your answer(Tips: better not to leave any questions).</li>
+            </ul>
+        </div>
+    </div>
+    <div class="button_container">
+        <h1>Are you ready to take exam?</h1>
+        <a href = "{% url 'question'%}">Start</a>
+    </div>
+ </div>
+{% endblock content %}

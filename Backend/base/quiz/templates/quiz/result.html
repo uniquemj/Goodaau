@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if passStatus %}
+<div class="congratulation_container">
+    <h4>Congratulations!!</h4>
+    <div>
+        <p>You have passed the written test examination for driving license. Download your pass receipt below for trial examination and also choose your available day to schedule trial day.</p>
+    </div>
+
+    <div class="button_container">
+        <a href = "{% url 'download' %}" target = "__blank"><button class = "btn">Download</button></a>
+        <a href = "{% url 'schedule' %}"><button class = "btn">Schedule trial day</button></a>
+    </div>
+ </div>
+ {% else %}
+ <div class="congratulation_container">
+    <h4>You Failed!!</h4>
+    <div>
+        <p>You must resubmit form and pay 1500 additional if you want to retry written exam to continue for trial exam.</p>
+    </div>
+
+    <div class="button_container">
+        <a href = "{% url 'fail'%}"><button class = "btn">Continue</button></a>
+    </div>
+ </div>
+ {% endif %}
+{% endblock content %}

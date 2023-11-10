@@ -1,0 +1,61 @@
+{% extends 'main.html'%}
+{% block content%}
+{% load static %}
+<div class="user_profile">
+    {%if user %}
+    <div class="photo_section">
+        <div class="user_photo">
+            <img src = "{{request.user.userdetail.photo.url}}"/>
+            <h2>@<u>{{request.user.username}}</u></h2>
+        </div>
+    </div>
+    {% else %}
+    <div class="photo_section">
+        <div class="user_photo">
+            <img src = "{% static 'image/avatar.svg'%}"/>
+            <h2>@<u>{{request.user.username}}</u></h2>
+        </div>
+    </div>
+    {% endif %}
+    <div class="user_detail">
+        <div class="detail_field">
+            <h3>Applicant Name:</h3>
+            <h3>{{request.user.userdetail.name}}</h3>
+        </div>
+        <div class="detail_field">
+            <h3>Date of Birth:</h3>
+            <h3>{{request.user.userdetail.date_of_birth}}</h3>
+        </div>
+        <div class="detail_field">
+            <h3>Father's Name:</h3>
+            <h3>{{request.user.userdetail.father_name}}</h3>
+        </div>
+        <div class="detail_field">
+            <h3>Address:</h3>
+            <h3>{{request.user.userdetail.address}}</h3>
+        </div>
+        <div class="detail_field">
+            <h3>Citizenship Id:</h3>
+            <h3>{{request.user.userdetail.citizenship_id}}</h3>
+        </div>
+        <div class="detail_field">
+            <h3>Blood Group:</h3>
+            <h3>{{request.user.userdetail.blood_group}}</h3>
+        </div>
+        <div class="detail_field">
+            <h3>Phone Number:</h3>
+            <h3>{{request.user.userdetail.phone_no}}</h3>
+        </div>
+    </div>
+</div>
+{% if request.user.userdetail %}
+<div class="edit-button">
+    <a href = "{% url 'edit-profile'%}" class=".btn">Edit</a>
+</div>
+{% else %}
+<div class="edit-button">
+    <a href = "{% url 'application'%}" class=".btn">Apply Form</a>
+</div>
+{% endif %}
+
+{% endblock content%}

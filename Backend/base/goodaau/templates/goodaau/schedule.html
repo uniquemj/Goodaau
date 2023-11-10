@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="schedule_container">
+    <div class="description_container">
+        <div class="description_sub_container">
+            <h2>Book Your Schedule For Trial Day</h2>
+            <p>Things to remember:</p>
+            <ul>
+                <li>Make sure to download Pass report after you have passed your exam.</li>
+                <li>Upload Pass report with Your Appointment date to book your schedule.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="schedule_form_container">
+        <form method = "post" action = "." enctype = "multipart/form-data">
+            {% csrf_token %}
+            <div class = "space-y-4">
+                {{form.as_p}}
+            </div>
+            {% if form.errors or form.non_field_errors %}
+            <div class = "mb-3 p-6 bg-red-100 rounded-xl">
+                {% for field in form%}
+                {{field.errors}}
+                {% endfor %}
+                {{form.non_field_errors}}
+            </div>
+            {% endif%}
+            <button class="mt-6 mb-6 py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Submit</button>       
+        </form>
+    </div>
+ </div>
+{% endblock content %}
+

@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+    <div id="main-container">
+        <div class="text-container">
+            <div class="title">
+                <p>Good<span>aau</span></p>
+            </div>
+            <div class="body">
+                <p>Goodaau is the online driving license management system that lets users to fill up the form and have written exam online without the need to attend physically in Transportation office.</p>
+            </div>
+            <div class="button">
+                <a href = "{% url "login"%}" class = "btn">Get Started</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="{% static 'image/aau.png'%}"/>
+        </div>
+    </div>
+
+{% endblock content %}

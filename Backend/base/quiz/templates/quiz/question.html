@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="exam_container">
+    <form method = "POST" action = '.'>
+        {% csrf_token %}
+            <div class="question_container">
+                <p>{{questions.question}}</p>
+            </div>
+            <div class="option_container">
+                {% for option in option%}
+                <div class="option">
+                    <input type = "radio" name = "btn" id = "btn" value = "{{option.option}}">{{option.option}}</input>
+                </div>
+                {% endfor %}
+            </div>
+        
+        <div class = "prev_next">
+            <a href = "{% url 'question' %}"><button class = "btn">Next</button></a>
+        </div>
+
+    </form>
+</div>
+{% endblock content %}
